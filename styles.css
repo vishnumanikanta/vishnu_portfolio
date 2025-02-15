@@ -5,6 +5,7 @@
   padding:0;
   box-sizing:border-box;
   scroll-behavior:smooth;
+  
 }
 a{
   text-decoration: none ;
@@ -230,49 +231,58 @@ body{
 
 /*---------------------------HomePage--------------------------*/
 
-.FirstElement{
-   display:flex;
-   justify-content: space-around;
-   align-items: center;
-   padding-top: 5rem; 
-   background-color: #202020;
-} 
 
-.FirstElement.adjusted-padding {
-  padding-top: 40px; 
+
+
+/* First Element */
+.FirstElement {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 5rem;
+  background-color: #202020;
+  margin: 0;
 }
 
-.FirstElement .profile-photo{
+.FirstElement.adjusted-padding {
+  padding-top: 40px;
+}
+
+.FirstElement .profile-photo {
   width: 300px;
-  height:  300px;
+  height: 300px;
   border-radius: 50%;
   overflow: hidden;
   border: 15px solid #444444;
-  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5)
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
 }
-profile-photo .img{
+
+.FirstElement .profile-photo img {
   height: 100%;
   width: 100%;
   transition: 0.5s;
 }
-.FirstElement .profile-photo img:hover{
+
+.FirstElement .profile-photo img:hover {
   transform: scale(1.2);
 }
+
 .profile-text {
   margin-top: 45px;
   max-width: 780px;
   display: flex;
   flex-direction: column;
-  gap: -60px; /* Add gap between flex items */
+  gap: -60px;
   line-height: -9.5rem;
-  height: auto; /* Adjust height as needed */
+  height: auto;
 }
 
 .profile-text h5 {
   color: #e5e5e5;
   font-size: 14px;
-  margin: 0; 
+  margin: 0;
 }
+
 .profile-text h1 {
   color: #00ffff;
   font-size: 3rem;
@@ -281,46 +291,133 @@ profile-photo .img{
 
 .profile-text p {
   color: #e5e5e5;
-  margin: 0; 
+  margin: 0;
 }
 
-.profile-text .social i{
-  color : #e5e5e5;
+.profile-text .social i {
+  color: #e5e5e5;
   font-size: 18px;
   margin-right: 10px;
   transition: 0.5s;
 }
-.profile-text .social i:hover{
-  color:#00FFFF;
+
+.profile-text .social i:hover {
+  color: #00ffff;
   transform: rotate(360deg);
 }
 
-/* ------------services---------------------- */
+/* Services Section */
+.services {
+  padding: 120px 0 20px;
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-align: center;
+  background-color: #202020;
+  margin: 0;
+}
 
+.services-container {
+  background-color: #202020;
+  display: flex;
+  gap: 90px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 70px 20px;
+  margin: 0;
+}
 
- /*---------------------------About---------------------------*/
+.service-card {
+  background: #444444;
+  border-radius: 15px;
+  border: 2px solid #00ffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  color: #e5e5e5;
+  position: relative;
+  overflow: hidden;
+}
 
-.about-area{
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00ffff, transparent);
+  transform: rotate(45deg);
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-color: #ffffff;
+}
+
+.icon {
+  font-size: 50px;
+  color: #00ffff;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover .icon {
+  transform: scale(1.2);
+  color: #ff6f61;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #e5e5e5;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about-area {
   padding-top: 130px;
   background-color: #202020;
+  margin: 0;
 }
-.about{
+
+.about {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom:50px;
+  padding-bottom: 90px; 
 }
-.about-content{
+
+.about-content {
   flex-basis: 60%;
 }
-.about-content h4{
-  color: #00FFFF;
+
+.about-content h4 {
+  color: #00ffff;
   font-size: 40px;
   line-height: 70px;
   text-transform: capitalize;
+  margin-left: 15px;
+  margin-top: -30px; 
+  margin-bottom: 30px; 
 }
 .about-content ul {
-  color:#fff;
+  color: #fff;
   text-align: justify;
 }
 
@@ -329,23 +426,23 @@ profile-photo .img{
   margin-bottom: 10px;
 }
 
-.about-skills{
+.about-skills {
   flex-basis: 35%;
 }
-.about-skills ul li{
+
+.about-skills ul li {
   border-bottom: 1px dashed #ddd;
   padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #fff;
   font-size: 18px;
 }
-.about-skills ul li:last-child{
+
+.about-skills ul li:last-child {
   border-bottom: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-
-
 /*---------------------------Button---------------------------*/
 
 .btn-group{
