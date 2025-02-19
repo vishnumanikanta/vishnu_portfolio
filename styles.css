@@ -804,6 +804,21 @@ body{
   object-fit: cover;
   aspect-ratio: 6.3/3;
 }
+.project-img1 {
+	transition: opactiy 300ms ease-in-out;
+	position: relative;
+	display: inline-block;
+  max-width: 900px;
+	height: 60%;
+  object-fit: cover;
+  aspect-ratio: 4.5/3;
+}
+
+.project-img1:hover {
+	opacity: 0.9;
+border: 2px solid white;
+
+}
 
 .project-img:hover {
 	opacity: 0.9;
@@ -868,6 +883,10 @@ border: 2px solid white;
 		height: 85%;
 		width: 80%;
 	}
+  .project-img1 {
+		height: 85%;
+		width: 90%;
+	}
 	.project h3 {
 		font-size: clamp(1.5rem, 2.5vw, 3.5rem);
 	}
@@ -889,6 +908,10 @@ border: 2px solid white;
 	.project-img {
 		height: 89%;
 		width: 94%;
+	}
+  .project-img1 {
+		height: 85%;
+		width: 90%;
 	}
 	.project h3 {
 		font-size: clamp(1.5rem, 3vw, 3.2rem);
@@ -917,6 +940,10 @@ border: 2px solid white;
 	.project-img {
 		height: 98%;
 		width: 96%;
+	}
+  .project-img1 {
+		height: 85%;
+		width: 100%;
 	}
 	.project h3 {
 		font-size: clamp(1.2rem, 3vw, 2.5rem);
