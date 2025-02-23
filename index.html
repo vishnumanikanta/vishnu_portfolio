@@ -534,11 +534,15 @@
                         <p>Get In Touch</p>
                     </div>
                     <div class="contact">
-                        <form name="submitToGoogleSheet">
-                            <input type="text" name="NAME" placeholder="Name" required>
-                            <input type="email" name="EMAIL" placeholder="Email" required>
-                            <input type="text" name="SUBJECT" placeholder="Subject">
-                            <textarea name="MESSAGE" placeholder="Message"></textarea>
+                        <form id="contactForm">
+                            <!-- Web3Forms API Key -->
+                            <input type="hidden" name="access_key" value="f072d255-dcbd-4128-8b49-c06e78cca12a">
+            
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="text" name="subject" placeholder="Subject">
+                            <textarea name="message" placeholder="Message" required></textarea>
+                            
                             <input type="submit" value="Send Message" class="submit">
                         </form>
                         <span id="msg"></span>
