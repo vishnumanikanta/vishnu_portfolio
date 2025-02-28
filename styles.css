@@ -813,18 +813,16 @@ body{
   object-fit: cover;
   aspect-ratio: 4.5/3;
 }
-
-.project-img1:hover {
-	opacity: 0.9;
-border: 2px solid white;
-
+.project-img2{
+  transition: opactiy 300ms ease-in-out;
+	position: relative;
+	display: inline-block;
+  max-width: 900px;
+	height: 60%;
+  object-fit: cover;
+  aspect-ratio: 5/3;
 }
 
-.project-img:hover {
-	opacity: 0.9;
-border: 2px solid white;
-
-}
 
 .project:nth-child(even) a {
 	order: 2;
